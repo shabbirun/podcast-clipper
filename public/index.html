@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Podcast Clipper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#/" class="brand"><span class="dot"></span>Podcast Clipper</a>
+      <form id="add-form" class="add-form">
+        <input id="add-input" placeholder="Paste a YouTube video URL, playlist URL, or channel @handle" autocomplete="off" />
+        <button type="submit" class="btn primary">Add</button>
+      </form>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="side-tools">
+          <input id="filter" class="filter" placeholder="Filter videos…" />
+          <select id="sort" class="sort" title="Sort videos">
+            <option value="publishedAt:desc">Newest</option>
+            <option value="publishedAt:asc">Oldest</option>
+            <option value="title:asc">Title A–Z</option>
+            <option value="duration:desc">Longest</option>
+            <option value="duration:asc">Shortest</option>
+            <option value="suggestionCount:desc">Most ideas</option>
+            <option value="clipCount:desc">Most clips</option>
+          </select>
+        </div>
+        <div class="side-links">
+          <a href="#/" class="all-link">☰ All videos (list view)</a>
+          <a href="#/planner" class="all-link">▦ Planner</a>
+        </div>
+        <ul id="video-list" class="video-list"></ul>
+      </aside>
+      <main id="main" class="main"></main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
